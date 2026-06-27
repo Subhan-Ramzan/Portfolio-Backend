@@ -25,8 +25,8 @@ app.use("/api/login", LoginRouter);
 app.use("/api/supporter", SupporterRouter);
 app.use("/api/downloadResume", downloadResume);
 
-const Port = process.env.port || 3001;
+const Port = process.env.PORT || 3001;
 
 app.listen(Port, () => {
-  console.log("Server is on");
+  console.log(`Port is ${Port}`);
 });
