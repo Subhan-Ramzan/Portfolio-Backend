@@ -6,6 +6,7 @@ import LoginRouter from "./Routes/login.js";
 import ProtectedRouter from "./Routes/protected.js";
 import SupporterRouter from "./Routes/supporter.js";
 import downloadResume from "./Routes/downloadResume.js";
+import healthRouter from "./Routes/health.js";
 import cors from "cors";
 
 const app = express();
@@ -24,6 +25,7 @@ app.use("/api/signup", SignupRouter);
 app.use("/api/login", LoginRouter);
 app.use("/api/supporter", SupporterRouter);
 app.use("/api/downloadResume", downloadResume);
+app.use("/api/health", healthRouter);
 
 const Port = process.env.PORT || 3001;
 
